@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mastermind</title>
+        <link rel="stylesheet" href="mastermind_v2.css">
+        <script src="mastermind_v2.js"></script>
+    </head>
+    <body>
+        <h1>Juego «Mastermind» con array y objetos</h1>
+        <!--
+            Versión v2 del juego «Mastermind»
+            Permite escoger el valor mínimo y máximo de los números a adivinar y la cantidad de números a adivinar
+            Implementado en JS utilizando arrays y objetos básicos
+        -->
+        <form id="formulario-configuracion">
+            <fieldset>
+                <legend>Configuración del juego</legend>
+                <p>
+                    <label for="input_configuracion_minimo">Mínimo:</label>
+                    <input type="number" id="input_configuracion_minimo">
+                    <label for="input_configuracion_minimo">Máximo:</label>
+                    <input type="number" id="input_configuracion_maximo">
+                </p>
+                <label for="input_configuracion_casillas">Número de casillas:</label>
+                <input type="number" id="input_configuracion_casillas">
+                <button type="button" id="boton_configurar" onclick="on_boton_configurar_click();">Empezar a jugar</button>
+            </fieldset>
+        </form>
+        <form id="formulario-jugada" class="oculto">
+        </form>
+    </body>
+</html>

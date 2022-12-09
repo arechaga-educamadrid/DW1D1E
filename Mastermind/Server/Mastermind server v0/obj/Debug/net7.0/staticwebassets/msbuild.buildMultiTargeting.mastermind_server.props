@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\mastermind_server.props" />
+</Project>

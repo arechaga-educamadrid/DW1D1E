@@ -1,0 +1,63 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+form {
+    margin-bottom: 1em;
+}
+
+form div {
+    margin-bottom: 0.5em;
+}
+
+#tabla-jugadas {
+    border-collapse: collapse;
+    border: solid 3px black;
+}
+
+#tabla-jugadas th {
+    padding: 0.5em;
+    min-width: 3ch;
+    text-align: center;
+}
+
+#tabla-jugadas td {
+    border: solid 2px black;
+    padding: 0.5em;
+    min-width: 3ch;
+    text-align: center;
+}
+
+.resultado-acierto {
+    background-color: darkgreen;
+    color: white;
+}
+
+.resultado-parcial {
+    background-color: yellow;
+    color: black;
+}
+
+.resultado-fallo {
+    background-color: darkred;
+    color: white;
+}
+
+.resultado-nan {
+    background-color: grey;
+    color: red;
+    font-weight: bold;
+}
+
+.enhorabuena {
+    font-size: larger;
+    margin-top: 1em;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: navy;
+    color: white;
+}
+
+.oculto {
+    display: none;
+}

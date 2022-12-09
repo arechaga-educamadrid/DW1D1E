@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mastermind</title>
+        <link rel="stylesheet" href="mastermind.css">
+        <script src="mastermind.js"></script>
+        <script src="mastermind_extendido.js"></script>
+    </head>
+    <body>
+        <h1>Juego «Mastermind» ampliado</h1>
+        <form id="formulario-configuracion">
+            <fieldset>
+                <legend>Configuración del juego</legend>
+                <label for="input_configuracion_minimo">Mínimo:</label>
+                <input type="number" size="2" id="input_configuracion_minimo">
+                <label for="input_configuracion_minimo">Máximo:</label>
+                <input type="number" size="2" id="input_configuracion_maximo">
+                <button type="button" id="boton_configurar" onclick="on_boton_configurar_click();">Empezar a jugar</button>
+            </fieldset>
+        </form>
+        <form id="formulario-jugada" class="oculto">
+            <input type="text" size="2" id="input_numero_1">
+            <input type="text" size="2" id="input_numero_2">
+            <input type="text" size="2" id="input_numero_3">
+            <input type="button" value="Enviar jugada" id="boton_enviar" onclick="on_boton_enviar_click();">
+        </form>
+    </body>
+</html>

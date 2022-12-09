@@ -1,0 +1,12 @@
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\mastermind_server.exe
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\appsettings.Development.json
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\appsettings.json
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\mastermind_server.dll
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\mastermind_server.deps.json
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\mastermind_server.runtimeconfig.json
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\mastermind_server.pdb
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\Microsoft.OpenApi.dll
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Developer\Documents\DW1D1E\Mastermind\Server\Mastermind server v0\bin\Debug\net7.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
