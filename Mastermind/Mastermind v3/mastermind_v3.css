@@ -43,8 +43,8 @@ form div {
     color: white;
 }
 
-.resultado-nan {
-    background-color: grey;
+.resultado-error {
+    background-color: black;
     color: red;
     font-weight: bold;
 }

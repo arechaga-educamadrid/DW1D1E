@@ -26,7 +26,7 @@ class ConfiguracionMastermind {
      * @param {number} maximo
      * @param {number} casillas
      */
-    constructor (minimo, maximo, casillas) {
+    constructor(minimo, maximo, casillas) {
         /** @type {number} */
         this.minimo = minimo;
 
@@ -330,10 +330,12 @@ function crear_celda_respuesta(intento, indice, juego) {
     let celda = window.document.createElement("td");
 
     celda.textContent = `${intento}`;
-    if (intento === numeros[indice]) {
+    // validación de rango
+    if ((intento < juego.minimo) || (intento > juego.maximo)) {
+        className = "resultado-error"
+    } else if (intento === numeros[indice]) {
         className = "resultado-acierto";
-    }
-    else {
+    } else {
         // asumimos que no hay acierto parcial
         className = "resultado-fallo";
 
