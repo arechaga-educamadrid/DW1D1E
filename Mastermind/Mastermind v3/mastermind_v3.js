@@ -6,6 +6,7 @@ Versión v3 del juego «Mastermind»
 Primera implementación utilizando clases, pero únicamente como meros "contenedores" de propiedades
 Modificadas las funciones para recibir un objeto de tipo "Configuracion" o "Juego" según convenga
 Eliminadas todas las variables globales, excepto una nueva, "mastermind" que contendrá el "juego"
+La validación de rango de la jugada se ha movido directamente a crear_celda_respuesta()
 */
 
 // --------------------------------------------------------------------------
