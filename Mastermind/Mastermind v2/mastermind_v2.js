@@ -239,9 +239,15 @@ function obtener_jugada(configuracion) {
 
     // obtenemos los intentos del jugador
     for (let i = 1; i <= configuracion.casillas; i++) {
+        let mensaje_error = `El número ${i} no es válido`;
+
         let input = /** @type {HTMLInputElement} */(window.document.getElementById(`input_jugada_${i}`));
-        let valor = validar_input_number_entero(input, `El número ${i} no es válido`);
+        let valor = validar_input_number_entero(input, mensaje_error);
         if (isNaN(valor)) return null;
+        if ((valor < configuracion.minimo) || (valor > configuracion.maximo)) {
+            alert(mensaje_error);
+            return null;
+        } // if
 
         // almacenamos
         jugada.push(valor);
