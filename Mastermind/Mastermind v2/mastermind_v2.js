@@ -34,7 +34,7 @@ var numeros_adivinar = [];
 
 /**
  * @param {HTMLInputElement} input
- * @param {any} mensaje_error
+ * @param {string} mensaje_error
  * @returns {number}
  */
 function validar_input_number_entero(input, mensaje_error) {

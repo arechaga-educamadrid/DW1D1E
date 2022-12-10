@@ -144,7 +144,7 @@ function crear_celda_respuesta(jugada, numero) {
     celda.className = className;
 
     return celda;
-} // crear_columna
+} // crear_celda_respuesta
 
 /**
  * @param {HTMLTableElement} tabla
