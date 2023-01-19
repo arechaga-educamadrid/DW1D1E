@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta charset="utf-8">
+        <title>Monitor «Mastermind»</title>
+        <link rel="stylesheet" href="assets/css/monitor_mastermind.css">
+        <script src="assets/scripts/htmlutils.js"></script>
+        <script src="assets/scripts/monitor_mastermind.js"></script>
+    </body>
+    <body>
+        <h1>Monitor «Mastermind»</h1>
+        <form>
+            <fieldset>
+                <legend>Configuración de acceso al servidor</legend>
+                <label for="input_url_controlador">URL del controlador:</label>
+                <input type="text" id="input_url_controlador" size="60"><br />
+                <label for="input_tiempo_refresco">Actualizar cada</label>
+                <input type="text" id="input_tiempo_refresco" size="4"> segundos
+                <button type="button" id="boton_iniciar" onclick="on_boton_iniciar_click();">Iniciar</button>
+                <button type="button" id="boton_parar" onclick="on_boton_parar_click();" disabled>Parar</button>
+                <button type="button" id="boton_iniciar" onclick="on_boton_actualizar_click();">Actualizar</button><br />
+                <span id="label_estado_monitorizacion">Monitorización no iniciada</span>
+            </fieldset>
+        </form>
+    </body>
+</html>
