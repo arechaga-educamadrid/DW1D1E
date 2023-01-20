@@ -14,15 +14,19 @@ public sealed class MastermindController : ControllerBase
 {
     private readonly IAlmacenJuegosMastermind _almacen;
 
-    public MastermindController(IAlmacenJuegosMastermind almacen)
+    private readonly ISimulacionLatencia _latencia;
+
+    public MastermindController(IAlmacenJuegosMastermind almacen, ISimulacionLatencia latencia)
     {
         _almacen = almacen;
+        _latencia = latencia;
     } // constructor
 
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<Guid> ObtenerListaIdentificadores()
     {
+        _latencia.Simular();
         return _almacen.ObtenerIdentificadores();
     } // ObtenerListaIdentificadores
 
@@ -31,6 +35,7 @@ public sealed class MastermindController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public ActionResult<Juego> ObtenerJuego(Guid id)
     {
+        _latencia.Simular();
         var juego = _almacen.Obtener(id);
         if (juego == null)
         {
@@ -46,6 +51,8 @@ public sealed class MastermindController : ControllerBase
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public ActionResult<Guid> NuevoJuego(ConfiguracionJuego configuracion)
     {
+        _latencia.Simular();
+
         // validación de la configuración
         // hay formas de hacerlo automático, pero para no complicar aún más el código lo hacemos manualmente
         if (configuracion is ISoportaValidacionAspNet modelo)
@@ -79,6 +86,8 @@ public sealed class MastermindController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public ActionResult<RespuestaJugada> RealizarJugada(Guid id, Jugada jugada)
     {
+        _latencia.Simular();
+
         var juego = _almacen.Obtener(id);
         if (juego == null)
         {
@@ -133,6 +142,8 @@ public sealed class MastermindController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public IActionResult Eliminar(Guid id)
     {
+        _latencia.Simular();
+
         var eliminado = _almacen.Eliminar(id);
 
         return eliminado ? Ok() : NotFound();
@@ -177,9 +188,10 @@ public sealed class MastermindController : ControllerBase
 
                 // comprobamos si está repetido
                 repetido = false;
-                for (int j=0 ; j<i ; j++)
+                for (int j = 0; j < i; j++)
                 {
-                    if (numero == numeros[j]) {
+                    if (numero == numeros[j])
+                    {
                         repetido = true;
                         break;
                     } // if
@@ -215,7 +227,7 @@ public sealed class MastermindController : ControllerBase
 
         var resultado = new string[juego.Numeros.Length];
         var coincidencias = 0;
-        for (int i=0 ; i<juego.Numeros.Length ; i++)
+        for (int i = 0; i < juego.Numeros.Length; i++)
         {
             var numero = jugada.Numeros[i];
             // fuera de rango?
@@ -237,7 +249,7 @@ public sealed class MastermindController : ControllerBase
             resultado[i] = "fallo";
 
             // coincidencia parcial?
-            for (int j=0 ; j<juego.Numeros.Length ; j++)
+            for (int j = 0; j < juego.Numeros.Length; j++)
             {
                 if (numero == juego.Numeros[j])
                 {

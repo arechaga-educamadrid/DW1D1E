@@ -37,6 +37,10 @@ builder.Services.AddSwaggerGen();
 // añadimos el "almacen" de las jugadas
 builder.Services.AddSingleton<IAlmacenJuegosMastermind, AlmacenMemoriaMastermind>();
 
+// añadimos el simulador de latencia
+// por defecto, está inhabilitado
+builder.Services.AddSingleton<ISimulacionLatencia, SimuladorLatencia>();
+
 // añadimos el servicio de "house keeping" para eliminar juegos caducados
 builder.Services.AddHostedService<MastermindHousekeepingService>();
 
