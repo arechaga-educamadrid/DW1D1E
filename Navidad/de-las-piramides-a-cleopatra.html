@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>De las pirámides a Cleopatra</title>
+        <script src="de-las-piramides-a-cleopatra.js"></script>
+        <script src="de-las-piramides-a-cleopatra-parte-2.js"></script>
+        <style>
+            .oculto { display: none; }
+        </style>
+    </head>
+    <body>
+        <h1>De las pirámides a Cleopatra</h1>
+        <form>
+            <label for="input_numero_a">A:</label>
+            <input type="text" id="input_numero_a" size="5"><br />
+            <label for="input_numero_b">B:</label>
+            <input type="text" id="input_numero_b" Size="5"><br />
+            <label for="input_numero_c">C:</label>
+            <input type="text" id="input_numero_c" size="5">
+            <button type="button" id="boton_calcular">Calcular</button>
+        </form>
+        <table id="tabla_resultados" class="oculto">
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody id="tabla_resultados_cuerpo">
+            </tbody>
+        </table>
+    </body>
+</html>
